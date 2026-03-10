@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <title>학생용 링크 모음</title>
     
     <link rel="manifest" href="manifest.json">
@@ -14,28 +19,34 @@
       window.OneSignalDeferred = window.OneSignalDeferred || [];
       OneSignalDeferred.push(function(OneSignal) {
         OneSignal.init({
-          // 주의: 아래 따옴표 안에 아까 발급받은 App ID를 복사해서 붙여넣으세요!
           appId: "ced69ad9-8c33-42bc-8c8b-9200ac22ae40", 
         });
       });
     </script>
 
     <style>
-        body { font-family: '맑은 고딕', sans-serif; background-color: #f4f7f6; text-align: center; padding: 30px 15px; }
+        /* 기본 배경 및 제목 디자인 */
+        body { font-family: '맑은 고딕', sans-serif; background-color: #f4f7f6; text-align: center; padding: 30px 15px; margin: 0; }
         h1 { color: #333; margin-bottom: 40px; font-size: 24px; }
-        .link-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 800px; margin: 0 auto; }
-        .link-button { position: relative; background-color: #4CAF50; color: white; padding: 20px 10px; text-decoration: none; font-size: 18px; font-weight: bold; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; display: flex; align-items: center; justify-content: center; word-break: keep-all; }
-        .link-button:hover { transform: translateY(-5px); background-color: #45a049; }
-        .new-badge { position: absolute; top: -10px; right: -10px; background-color: #ff4757; color: white; font-size: 12px; font-weight: 900; padding: 4px 8px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); animation: bounce 1s infinite alternate; }
+        
+        /* [핵심 수정] 디자인 이름(클래스)을 app-grid, app-btn으로 새롭게 바꿨습니다! */
+        .app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 800px; margin: 0 auto; }
+        
+        /* 강제로 초록색 배경과 흰색 글씨를 입히도록 !important 속성 추가 */
+        .app-btn { position: relative; background-color: #4CAF50 !important; color: white !important; padding: 20px 10px; text-decoration: none !important; font-size: 18px; font-weight: bold; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; display: flex; align-items: center; justify-content: center; word-break: keep-all; }
+        
+        .app-btn:hover { transform: translateY(-5px); background-color: #45a049 !important; }
+        
+        .app-badge { position: absolute; top: -10px; right: -10px; background-color: #ff4757; color: white; font-size: 12px; font-weight: 900; padding: 4px 8px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); animation: bounce 1s infinite alternate; }
+        
         @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-3px); } }
     </style>
 </head>
 <body>
     <h1>📚 감정 6-3 즐겨찾기 📚</h1>
-    <div class="link-container" id="linkContainer"></div>
+    <div class="app-grid" id="linkContainer"></div>
 
     <script>
-        // 수정된 링크 데이터 부분입니다!
         const links = [
             { name: '그라운드카드', url: 'https://growndcard.com', isNew: false },
             { name: '카훗', url: 'https://kahoot.it', isNew: false },
@@ -48,28 +59,4 @@
             const anchor = document.createElement('a');
             anchor.href = link.url;
             anchor.target = '_blank';
-            anchor.className = 'link-button';
-            anchor.textContent = link.name;
-            if (link.isNew === true) {
-                const badge = document.createElement('span');
-                badge.className = 'new-badge';
-                badge.textContent = 'NEW';
-                anchor.appendChild(badge);
-            }
-            container.appendChild(anchor);
-        });
-
-        // [PWA 추가 설정] 서비스 워커 등록
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(reg => console.log('서비스 워커가 등록되었습니다!', reg))
-                    .catch(err => console.log('서비스 워커 등록 실패:', err));
-            });
-        }
-    </script>
-</body>
-</html>
-
-
-
+            anchor.className = 'app-btn'; // [핵심 수정] 자바스크립트에서도 새로운 디자인
