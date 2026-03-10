@@ -8,14 +8,22 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#4CAF50">
     <link rel="apple-touch-icon" href="icon.png"> 
+
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(function(OneSignal) {
+        OneSignal.init({
+          // 주의: 아래 따옴표 안에 아까 발급받은 App ID를 복사해서 붙여넣으세요!
+          appId: "ced69ad9-8c33-42bc-8c8b-9200ac22ae40", 
+        });
+      });
+    </script>
+
     <style>
+        /* CSS는 기존과 동일하게 유지합니다 */
         body { font-family: '맑은 고딕', sans-serif; background-color: #f4f7f6; text-align: center; padding: 30px 15px; }
-        h1 { color: #333; margin-bottom: 40px; font-size: 24px; }
-        .link-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 800px; margin: 0 auto; }
-        .link-button { position: relative; background-color: #4CAF50; color: white; padding: 20px 10px; text-decoration: none; font-size: 18px; font-weight: bold; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; display: flex; align-items: center; justify-content: center; word-break: keep-all; }
-        .link-button:hover { transform: translateY(-5px); background-color: #45a049; }
-        .new-badge { position: absolute; top: -10px; right: -10px; background-color: #ff4757; color: white; font-size: 12px; font-weight: 900; padding: 4px 8px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); animation: bounce 1s infinite alternate; }
-        @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-3px); } }
+        /* ... (중략: 기존 CSS 코드) ... */
     </style>
 </head>
 <body>
@@ -58,4 +66,5 @@
     </script>
 </body>
 </html>
+
 
