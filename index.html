@@ -59,4 +59,26 @@
             const anchor = document.createElement('a');
             anchor.href = link.url;
             anchor.target = '_blank';
-            anchor.className = 'app-btn'; // [핵심 수정] 자바스크립트에서도 새로운 디자인
+            anchor.className = 'app-btn'; // [핵심 수정] 자바스크립트에서도 새로운 디자인 이름을 부릅니다
+            anchor.textContent = link.name;
+            
+            if (link.isNew === true) {
+                const badge = document.createElement('span');
+                badge.className = 'app-badge'; // 배지 이름도 변경
+                badge.textContent = 'NEW';
+                anchor.appendChild(badge);
+            }
+            container.appendChild(anchor);
+        });
+
+        // 서비스 워커 등록
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('서비스 워커가 성공적으로 등록되었습니다.'))
+                    .catch(err => console.log('서비스 워커 등록 실패:', err));
+            });
+        }
+    </script>
+</body>
+</html>
