@@ -3,91 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    
-    <title>학생용 링크 모음</title>
-    
+
+    <title>감정 6-3 즐겨찾기</title>
+
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#4CAF50">
-    <link rel="apple-touch-icon" href="icon.png"> 
+    <meta name="theme-color" content="#6366f1">
+    <link rel="icon" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
 
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
       window.OneSignalDeferred = window.OneSignalDeferred || [];
-      OneSignalDeferred.push(function(OneSignal) {
-        OneSignal.init({
-          appId: "ced69ad9-8c33-42bc-8c8b-9200ac22ae40", 
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "ced69ad9-8c33-42bc-8c8b-9200ac22ae40",
+          // 캐싱용 sw.js 하나로 통합 (OneSignal SDK는 sw.js 안에서 importScripts로 불러옴)
+          serviceWorkerPath: "sw.js",
+          serviceWorkerParam: { scope: "./" }
         });
+        updateBellButton(OneSignal);
       });
     </script>
 
     <style>
-        /* 기본 배경 및 제목 디자인 */
-        body { font-family: '맑은 고딕', sans-serif; background-color: #f4f7f6; text-align: center; padding: 30px 15px; margin: 0; }
-        h1 { color: #333; margin-bottom: 40px; font-size: 24px; }
-        
-        /* [핵심 수정] 디자인 이름(클래스)을 app-grid, app-btn으로 새롭게 바꿨습니다! */
-        .app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 800px; margin: 0 auto; }
-        
-        /* 강제로 초록색 배경과 흰색 글씨를 입히도록 !important 속성 추가 */
-        .app-btn { position: relative; background-color: #4CAF50 !important; color: white !important; padding: 20px 10px; text-decoration: none !important; font-size: 18px; font-weight: bold; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; display: flex; align-items: center; justify-content: center; word-break: keep-all; }
-        
-        .app-btn:hover { transform: translateY(-5px); background-color: #45a049 !important; }
-        
-        .app-badge { position: absolute; top: -10px; right: -10px; background-color: #ff4757; color: white; font-size: 12px; font-weight: 900; padding: 4px 8px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); animation: bounce 1s infinite alternate; }
-        
+        :root {
+            --bg1: #eef2ff;
+            --bg2: #fdf4ff;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-sub: #64748b;
+            --shadow: 0 4px 14px rgba(99, 102, 241, 0.10);
+            --shadow-hover: 0 10px 24px rgba(99, 102, 241, 0.18);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg1: #0f172a;
+                --bg2: #1e1b4b;
+                --card: #1e293b;
+                --text: #f1f5f9;
+                --text-sub: #94a3b8;
+                --shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+                --shadow-hover: 0 10px 24px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', '맑은 고딕', sans-serif;
+            background: linear-gradient(160deg, var(--bg1) 0%, var(--bg2) 100%);
+            background-attachment: fixed;
+            color: var(--text);
+            margin: 0;
+            min-height: 100vh;
+            padding: 28px 16px 60px;
+        }
+
+        .wrap { max-width: 860px; margin: 0 auto; }
+
+        /* ---- 헤더 ---- */
+        header { text-align: center; margin-bottom: 26px; position: relative; }
+        h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: -0.5px; }
+        h1 .grad {
+            background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #6366f1; /* 그라데이션 미지원 브라우저 대비 */
+        }
+        .updated { font-size: 13px; color: var(--text-sub); margin: 0; }
+
+        /* ---- 알림 켜기 버튼 ---- */
+        .bell-btn {
+            margin-top: 12px;
+            display: none; /* 알림 미허용 상태에서만 JS로 표시 */
+            border: none;
+            background: var(--card);
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 600;
+            padding: 9px 16px;
+            border-radius: 999px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+        }
+
+        /* ---- 공지 배너 ---- */
+        .notice {
+            display: none;
+            background: linear-gradient(90deg, #fef3c7, #fde68a);
+            color: #78350f;
+            border-radius: 16px;
+            padding: 14px 18px;
+            margin-bottom: 22px;
+            font-size: 15px;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            text-align: left;
+            line-height: 1.5;
+        }
+        .notice::before { content: "📢 "; }
+
+        /* ---- 오늘의 링크 (featured) ---- */
+        .featured-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: linear-gradient(120deg, #6366f1, #8b5cf6);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            padding: 20px 22px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+            transition: transform 0.15s ease;
+        }
+        .featured-card:active { transform: scale(0.98); }
+        .featured-card .emoji { font-size: 36px; }
+        .featured-card .label { font-size: 12px; font-weight: 700; opacity: 0.85; letter-spacing: 1px; }
+        .featured-card .name { font-size: 20px; font-weight: 800; margin-top: 2px; }
+
+        /* ---- 링크 카드 그리드 ---- */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 14px;
+        }
+
+        .app-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--card);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 18px;
+            padding: 22px 12px 18px;
+            min-height: 118px;
+            box-shadow: var(--shadow);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            word-break: keep-all;
+            text-align: center;
+            border-top: 4px solid var(--accent, #6366f1);
+        }
+        .app-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+        .app-card:active { transform: scale(0.97); }
+
+        .app-card .icon {
+            font-size: 30px;
+            width: 56px; height: 56px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 16px;
+            background: color-mix(in srgb, var(--accent, #6366f1) 14%, transparent);
+        }
+        .app-card .name { font-size: 15px; font-weight: 700; line-height: 1.35; }
+
+        .app-badge {
+            position: absolute;
+            top: -8px; right: -6px;
+            background: linear-gradient(90deg, #f43f5e, #fb7185);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 900;
+            padding: 4px 9px;
+            border-radius: 999px;
+            box-shadow: 0 2px 6px rgba(244, 63, 94, 0.4);
+            animation: bounce 1s infinite alternate;
+        }
         @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-3px); } }
+
+        .status { text-align: center; color: var(--text-sub); font-size: 14px; padding: 30px 0; }
     </style>
 </head>
 <body>
-    <h1>📚 감정 6-3 즐겨찾기 📚</h1>
-    <div class="app-grid" id="linkContainer"></div>
+    <div class="wrap">
+        <header>
+            <h1>📚 <span class="grad">감정 6-3 즐겨찾기</span> 📚</h1>
+            <p class="updated" id="updatedText"></p>
+            <button class="bell-btn" id="bellBtn">🔔 알림 켜기</button>
+        </header>
+
+        <div class="notice" id="noticeBanner"></div>
+        <div id="featuredContainer"></div>
+        <div class="app-grid" id="linkContainer">
+            <div class="status">불러오는 중...</div>
+        </div>
+    </div>
 
     <script>
-        const links = [
-            { name: '그라운드카드', url: 'https://growndcard.com', isNew: false },
-            { name: '카훗', url: 'https://kahoot.it', isNew: false },
-            { name: '블루킷', url: 'https://play.blooket.com/play', isNew: false },
-            { name: '나이스 학부모서비스 학부모용', url: 'https://parents.neis.go.kr', isNew: false },
-            { name: '방탈출 퀴즈', url: 'https://how-to-teach-e92be.web.app/', isNew: false },
-            { name: '나라 위치 랭킹전', url: 'https://icodes.mycafe24.com/kor/findworld/', isNew: false },
-            { name: '2학기 전설의 검', url: 'https://legendaryswordbh.pages.dev/', isNew: false },
-            { name: '복습RPG', url: 'https://rewindrpg.web.app/', isNew: true },
-            { name: '인공지능 학습 팅커벨', url: 'https://b.tkbell.co.kr/tkboard/woi/1341093/3V8jto8TVr.do?pageSeq=2562066', isNew: true }
-           ];
+        // 카드 상단 포인트 색상 (순서대로 순환)
+        const ACCENTS = ['#6366f1', '#0ea5e9', '#10b981', '#f59e0b', '#ec4899', '#8b5cf6', '#14b8a6', '#f97316'];
 
         const container = document.getElementById('linkContainer');
+        const featuredContainer = document.getElementById('featuredContainer');
+        const noticeBanner = document.getElementById('noticeBanner');
+        const updatedText = document.getElementById('updatedText');
 
-        links.forEach(link => {
-            const anchor = document.createElement('a');
-            anchor.href = link.url;
-            anchor.target = '_blank';
-            anchor.className = 'app-btn'; // [핵심 수정] 자바스크립트에서도 새로운 디자인 이름을 부릅니다
-            anchor.textContent = link.name;
-            
-            if (link.isNew === true) {
-                const badge = document.createElement('span');
-                badge.className = 'app-badge'; // 배지 이름도 변경
-                badge.textContent = 'NEW';
-                anchor.appendChild(badge);
+        function render(data) {
+            // 공지 배너
+            if (data.notice && data.notice.trim()) {
+                noticeBanner.textContent = data.notice;
+                noticeBanner.style.display = 'block';
+            } else {
+                noticeBanner.style.display = 'none';
             }
-            container.appendChild(anchor);
+
+            // 마지막 업데이트 표시
+            updatedText.textContent = data.updated ? `마지막 업데이트: ${data.updated}` : '';
+
+            // 오늘의 링크 (featured: true)
+            featuredContainer.innerHTML = '';
+            (data.links || []).filter(l => l.featured).forEach(link => {
+                const a = document.createElement('a');
+                a.className = 'featured-card';
+                a.href = link.url;
+                a.target = '_blank';
+                a.rel = 'noopener';
+                a.innerHTML = `<span class="emoji"></span><span><div class="label">⭐ 오늘의 링크</div><div class="name"></div></span>`;
+                a.querySelector('.emoji').textContent = link.emoji || '🔗';
+                a.querySelector('.name').textContent = link.name;
+                featuredContainer.appendChild(a);
+            });
+
+            // 일반 링크 카드
+            container.innerHTML = '';
+            (data.links || []).forEach((link, i) => {
+                const a = document.createElement('a');
+                a.className = 'app-card';
+                a.href = link.url;
+                a.target = '_blank';
+                a.rel = 'noopener';
+                a.style.setProperty('--accent', ACCENTS[i % ACCENTS.length]);
+
+                const icon = document.createElement('span');
+                icon.className = 'icon';
+                icon.textContent = link.emoji || '🔗';
+                a.appendChild(icon);
+
+                const name = document.createElement('span');
+                name.className = 'name';
+                name.textContent = link.name;
+                a.appendChild(name);
+
+                if (link.isNew === true) {
+                    const badge = document.createElement('span');
+                    badge.className = 'app-badge';
+                    badge.textContent = 'NEW';
+                    a.appendChild(badge);
+                }
+                container.appendChild(a);
+            });
+        }
+
+        // 링크 목록을 항상 서버에서 새로 가져옴 (캐시 완전 우회)
+        let lastPayload = '';
+        async function loadLinks() {
+            try {
+                const res = await fetch(`./links.json?ts=${Date.now()}`, { cache: 'no-store' });
+                if (!res.ok) throw new Error(res.status);
+                const text = await res.text();
+                if (text === lastPayload) return; // 변경 없으면 다시 그리지 않음
+                lastPayload = text;
+                const data = JSON.parse(text);
+                render(data);
+                localStorage.setItem('links-backup', text); // 오프라인 대비 백업
+            } catch (e) {
+                // 네트워크 실패 시: 마지막으로 성공한 목록을 보여줌
+                if (!lastPayload) {
+                    const backup = localStorage.getItem('links-backup');
+                    if (backup) {
+                        lastPayload = backup;
+                        render(JSON.parse(backup));
+                    } else {
+                        container.innerHTML = '<div class="status">인터넷 연결을 확인한 뒤 새로고침 해 주세요 🙏</div>';
+                    }
+                }
+            }
+        }
+
+        loadLinks();
+
+        // 홈 화면 아이콘으로 다시 열거나 탭으로 돌아올 때마다 최신 목록으로 자동 갱신
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) loadLinks();
+        });
+        window.addEventListener('pageshow', (e) => {
+            if (e.persisted) loadLinks(); // 뒤로가기 캐시(bfcache)에서 복원된 경우
         });
 
-        // 서비스 워커 등록
+        // 알림 켜기 버튼: 아직 허용 전이면 표시
+        function updateBellButton(OneSignal) {
+            const btn = document.getElementById('bellBtn');
+            try {
+                if (Notification.permission === 'granted') { btn.style.display = 'none'; return; }
+                btn.style.display = 'inline-block';
+                btn.onclick = async () => {
+                    try {
+                        await OneSignal.Notifications.requestPermission();
+                        if (Notification.permission === 'granted') btn.style.display = 'none';
+                    } catch (e) { console.log('알림 권한 요청 실패:', e); }
+                };
+            } catch (e) { /* 알림 미지원 브라우저 */ }
+        }
+
+        // 서비스 워커 등록 (OneSignal 초기화 실패 시를 대비한 보조 등록, 같은 sw.js라 중복 안전)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(reg => console.log('서비스 워커가 성공적으로 등록되었습니다.'))
+                navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' })
                     .catch(err => console.log('서비스 워커 등록 실패:', err));
             });
         }
     </script>
 </body>
 </html>
-
-
-
