@@ -1,0 +1,69 @@
+{
+  "updated": "2026-09-04",
+  "notice": "",
+  "links": [
+    {
+      "name": "그라운드카드",
+      "url": "https://growndcard.com",
+      "emoji": "🃏",
+      "isNew": false,
+      "featured": false
+    },
+    {
+      "name": "카훗",
+      "url": "https://kahoot.it",
+      "emoji": "🎯",
+      "isNew": false,
+      "featured": false
+    },
+    {
+      "name": "블루킷",
+      "url": "https://play.blooket.com/play",
+      "emoji": "🚀",
+      "isNew": false,
+      "featured": false
+    },
+    {
+      "name": "나이스 학부모서비스 학부모용",
+      "url": "https://parents.neis.go.kr",
+      "emoji": "📋",
+      "isNew": false,
+      "featured": false
+    },
+    {
+      "name": "방탈출 퀴즈",
+      "url": "https://how-to-teach-e92be.web.app/",
+      "emoji": "🗝️",
+      "isNew": false,
+      "featured": false
+    },
+    {
+      "name": "나라 위치 랭킹전",
+      "url": "https://icodes.mycafe24.com/kor/findworld/",
+      "emoji": "🌍",
+      "isNew": false,
+      "featured": false
+    },
+    {
+      "name": "2학기 전설의 검",
+      "url": "https://legendaryswordbh.pages.dev/",
+      "emoji": "⚔️",
+      "isNew": false,
+      "featured": false
+    },
+    {
+      "name": "복습RPG",
+      "url": "https://rewindrpg.web.app/",
+      "emoji": "🎮",
+      "isNew": true,
+      "featured": false
+    },
+    {
+      "name": "인공지능 학습 팅커벨",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/3V8jto8TVr.do?pageSeq=2562066",
+      "emoji": "🤖",
+      "isNew": true,
+      "featured": false
+    }
+  ]
+}
