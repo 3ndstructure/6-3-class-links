@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04",
+  "updated": "2026-09-11",
   "notice": "",
   "links": [
     {
@@ -55,6 +55,13 @@
       "name": "복습RPG",
       "url": "https://rewindrpg.web.app/",
       "emoji": "🎮",
+      "isNew": true,
+      "featured": false
+    },
+    {
+      "name": "엔트리",
+      "url": "https://playentry.org/",
+      "emoji": "🧩",
       "isNew": true,
       "featured": false
     },
