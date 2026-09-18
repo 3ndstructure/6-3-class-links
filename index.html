@@ -130,6 +130,16 @@
         .featured-card .emoji { font-size: 36px; }
         .featured-card .label { font-size: 12px; font-weight: 700; opacity: 0.85; letter-spacing: 1px; }
         .featured-card .name { font-size: 20px; font-weight: 800; margin-top: 2px; }
+        .featured-card .desc {
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 8px;
+            line-height: 1.5;
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 10px;
+            padding: 8px 12px;
+            word-break: keep-all;
+        }
 
         /* ---- 링크 카드 그리드 ---- */
         .app-grid {
@@ -230,9 +240,16 @@
                 a.href = link.url;
                 a.target = '_blank';
                 a.rel = 'noopener';
-                a.innerHTML = `<span class="emoji"></span><span><div class="label">⭐ 오늘의 링크</div><div class="name"></div></span>`;
+                a.innerHTML = `<span class="emoji"></span><span><div class="label"></div><div class="name"></div></span>`;
                 a.querySelector('.emoji').textContent = link.emoji || '🔗';
+                a.querySelector('.label').textContent = link.label || '⭐ 오늘의 링크';
                 a.querySelector('.name').textContent = link.name;
+                if (link.desc) {
+                    const desc = document.createElement('div');
+                    desc.className = 'desc';
+                    desc.textContent = link.desc;
+                    a.querySelector('span:last-child').appendChild(desc);
+                }
                 featuredContainer.appendChild(a);
             });
 
