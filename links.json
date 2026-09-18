@@ -1,7 +1,16 @@
 {
-  "updated": "2026-09-11",
+  "updated": "2026-09-18",
   "notice": "",
   "links": [
+    {
+      "name": "모두스쿨 (학생사진셀렉)",
+      "url": "https://www.moduschool.co.kr/",
+      "emoji": "📸",
+      "isNew": true,
+      "featured": true,
+      "label": "⭐ 중요",
+      "desc": "학생사진셀렉 클릭 → 접속번호(5자리) 및 비밀번호(4자리) 입력 후 사진 선택"
+    },
     {
       "name": "그라운드카드",
       "url": "https://growndcard.com",
