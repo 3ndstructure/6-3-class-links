@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18",
+  "updated": "2026-09-21",
   "notice": "",
   "links": [
     {
@@ -71,6 +71,13 @@
       "name": "엔트리",
       "url": "https://playentry.org/",
       "emoji": "🧩",
+      "isNew": true,
+      "featured": false
+    },
+    {
+      "name": "치아오치아오",
+      "url": "https://m00nssaem12.github.io/ciaociao/",
+      "emoji": "👋",
       "isNew": true,
       "featured": false
     },
