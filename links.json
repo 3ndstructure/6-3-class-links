@@ -6,10 +6,8 @@
       "name": "모두스쿨 (학생사진셀렉)",
       "url": "https://www.moduschool.co.kr/",
       "emoji": "📸",
-      "isNew": true,
-      "featured": true,
-      "label": "⭐ 중요",
-      "desc": "학생사진셀렉 클릭 → 접속번호(5자리) 및 비밀번호(4자리) 입력 후 사진 선택"
+      "isNew": false,
+      "featured": false
     },
     {
       "name": "그라운드카드",
@@ -64,34 +62,41 @@
       "name": "복습RPG",
       "url": "https://rewindrpg.web.app/",
       "emoji": "🎮",
-      "isNew": true,
+      "isNew": false,
       "featured": false
     },
     {
       "name": "엔트리",
       "url": "https://playentry.org/",
       "emoji": "🧩",
-      "isNew": true,
+      "isNew": false,
       "featured": false
     },
     {
       "name": "치아오치아오",
       "url": "https://m00nssaem12.github.io/ciaociao/",
       "emoji": "👋",
-      "isNew": true,
+      "isNew": false,
       "featured": false
     },
     {
       "name": "HTP 마음검사",
       "url": "https://htp-web.web.app/",
       "emoji": "🎨",
-      "isNew": true,
+      "isNew": false,
       "featured": false
     },
     {
       "name": "인공지능 학습 팅커벨",
       "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/3V8jto8TVr.do?pageSeq=2562066",
       "emoji": "🤖",
+      "isNew": false,
+      "featured": false
+    },
+    {
+      "name": "캔바 팀 참여",
+      "url": "https://www.canva.com/brand/join?token=owKDwoXo6THtOMX3AIAvWw&brandingVariant=edu&referrer=team-invite",
+      "emoji": "🖌️",
       "isNew": true,
       "featured": false
     }
