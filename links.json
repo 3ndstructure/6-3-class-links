@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "notice": "",
   "links": [
     {
@@ -78,6 +78,13 @@
       "name": "치아오치아오",
       "url": "https://m00nssaem12.github.io/ciaociao/",
       "emoji": "👋",
+      "isNew": true,
+      "featured": false
+    },
+    {
+      "name": "HTP 그림검사",
+      "url": "https://htp-web.web.app/",
+      "emoji": "🎨",
       "isNew": true,
       "featured": false
     },
