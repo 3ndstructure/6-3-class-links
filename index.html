@@ -253,9 +253,9 @@
                 featuredContainer.appendChild(a);
             });
 
-            // 일반 링크 카드
+            // 일반 링크 카드 (상단 카드로 표시된 링크는 중복 표시하지 않음)
             container.innerHTML = '';
-            (data.links || []).forEach((link, i) => {
+            (data.links || []).filter(l => !l.featured).forEach((link, i) => {
                 const a = document.createElement('a');
                 a.className = 'app-card';
                 a.href = link.url;

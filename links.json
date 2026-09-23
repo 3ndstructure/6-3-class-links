@@ -1,7 +1,34 @@
 {
-  "updated": "2026-09-22",
-  "notice": "",
+  "updated": "2026-09-23",
+  "notice": "오늘 수업: 아래 1️⃣ → 2️⃣ → 3️⃣ 순서대로 진행하세요!",
   "links": [
+    {
+      "name": "팀 참여하기",
+      "url": "https://www.canva.com/brand/join?token=owKDwoXo6THtOMX3AIAvWw&brandingVariant=edu&referrer=team-invite",
+      "emoji": "🤝",
+      "isNew": false,
+      "featured": true,
+      "label": "1️⃣ 1단계",
+      "desc": "캔바 팀에 참여해요 (이미 참여했으면 2단계로!)"
+    },
+    {
+      "name": "모두의 풍속도",
+      "url": "https://pungsokdo.com/main",
+      "emoji": "🖼️",
+      "isNew": false,
+      "featured": true,
+      "label": "2️⃣ 2단계",
+      "desc": "모두의 풍속도에 접속해 인물 사진을 복사해요"
+    },
+    {
+      "name": "풍속도 꾸미기 (캔바)",
+      "url": "https://canva.link/vwl0vuwyc437kai",
+      "emoji": "🖌️",
+      "isNew": false,
+      "featured": true,
+      "label": "3️⃣ 3단계",
+      "desc": "복사한 인물 사진으로 풍속도를 꾸며요"
+    },
     {
       "name": "모두스쿨 (학생사진셀렉)",
       "url": "https://www.moduschool.co.kr/",
@@ -91,13 +118,6 @@
       "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/3V8jto8TVr.do?pageSeq=2562066",
       "emoji": "🤖",
       "isNew": false,
-      "featured": false
-    },
-    {
-      "name": "캔바 팀 참여",
-      "url": "https://www.canva.com/brand/join?token=owKDwoXo6THtOMX3AIAvWw&brandingVariant=edu&referrer=team-invite",
-      "emoji": "🖌️",
-      "isNew": true,
       "featured": false
     }
   ]
