@@ -1,42 +1,34 @@
 {
   "updated": "2026-09-23",
-  "notice": "오늘 수업: 아래 1️⃣ → 2️⃣ → 3️⃣ → 4️⃣ 순서대로 진행하세요! (팅커벨 보드 비밀번호: 6363)",
+  "notice": "",
   "links": [
     {
-      "name": "팀 참여하기",
+      "name": "캔바 팀 참여",
       "url": "https://www.canva.com/brand/join?token=owKDwoXo6THtOMX3AIAvWw&brandingVariant=edu&referrer=team-invite",
       "emoji": "🤝",
       "isNew": false,
-      "featured": true,
-      "label": "1️⃣ 1단계",
-      "desc": "캔바 팀에 참여해요 (이미 참여했으면 2단계로!)"
+      "featured": false
     },
     {
       "name": "모두의 풍속도",
       "url": "https://pungsokdo.com/main",
       "emoji": "🖼️",
       "isNew": false,
-      "featured": true,
-      "label": "2️⃣ 2단계",
-      "desc": "모두의 풍속도에 접속해 인물 사진을 복사해요"
+      "featured": false
     },
     {
       "name": "풍속도 꾸미기 (캔바)",
       "url": "https://canva.link/vwl0vuwyc437kai",
       "emoji": "🖌️",
       "isNew": false,
-      "featured": true,
-      "label": "3️⃣ 3단계",
-      "desc": "복사한 인물 사진으로 풍속도를 꾸며요"
+      "featured": false
     },
     {
       "name": "결과물 업로드 (팅커벨 보드)",
       "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/93VIWjXvg0.do?pageSeq=2607621",
       "emoji": "📤",
       "isNew": false,
-      "featured": true,
-      "label": "4️⃣ 4단계",
-      "desc": "팅커벨 보드에 완성한 풍속도를 올려요 (보드 비밀번호: 6363)"
+      "featured": false
     },
     {
       "name": "모두스쿨 (학생사진셀렉)",
