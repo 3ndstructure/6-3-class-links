@@ -141,6 +141,26 @@
             word-break: keep-all;
         }
 
+        /* ---- 그룹(칸) 제목 ---- */
+        .group-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 800;
+            margin: 30px 2px 12px;
+            color: var(--text);
+        }
+        .group-title:first-child { margin-top: 4px; }
+        .group-title::after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #6366f1aa, transparent);
+        }
+
         /* ---- 링크 카드 그리드 ---- */
         .app-grid {
             display: grid;
@@ -206,7 +226,7 @@
 
         <div class="notice" id="noticeBanner"></div>
         <div id="featuredContainer"></div>
-        <div class="app-grid" id="linkContainer">
+        <div id="linkContainer">
             <div class="status">불러오는 중...</div>
         </div>
     </div>
@@ -254,8 +274,32 @@
             });
 
             // 일반 링크 카드 (상단 카드로 표시된 링크는 중복 표시하지 않음)
+            // group 값이 있으면 그룹별로 칸을 나눠서 표시
             container.innerHTML = '';
-            (data.links || []).filter(l => !l.featured).forEach((link, i) => {
+            const normalLinks = (data.links || []).filter(l => !l.featured);
+            const groupNames = [];
+            const grouped = new Map();
+            normalLinks.forEach(link => {
+                const g = link.group || '기타';
+                if (!grouped.has(g)) { grouped.set(g, []); groupNames.push(g); }
+                grouped.get(g).push(link);
+            });
+
+            let cardIndex = 0;
+            groupNames.forEach(g => {
+                if (groupNames.length > 1 || g !== '기타') {
+                    const title = document.createElement('h2');
+                    title.className = 'group-title';
+                    title.textContent = g;
+                    container.appendChild(title);
+                }
+                const grid = document.createElement('div');
+                grid.className = 'app-grid';
+                grouped.get(g).forEach(link => addCard(grid, link, cardIndex++));
+                container.appendChild(grid);
+            });
+
+            function addCard(grid, link, i) {
                 const a = document.createElement('a');
                 a.className = 'app-card';
                 a.href = link.url;
@@ -279,8 +323,8 @@
                     badge.textContent = 'NEW';
                     a.appendChild(badge);
                 }
-                container.appendChild(a);
-            });
+                grid.appendChild(a);
+            }
         }
 
         // 링크 목록을 항상 서버에서 새로 가져옴 (캐시 완전 우회)

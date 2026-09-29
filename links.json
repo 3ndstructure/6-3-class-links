@@ -1,97 +1,126 @@
 {
-  "updated": "2026-09-28",
+  "updated": "2026-09-29",
   "notice": "",
   "links": [
     {
-      "name": "모두스쿨 (학생사진셀렉)",
-      "url": "https://www.moduschool.co.kr/",
-      "emoji": "📸",
+      "name": "챠오챠오",
+      "url": "https://m00nssaem12.github.io/ciaociao/",
+      "emoji": "👋",
       "isNew": false,
-      "featured": false
+      "featured": false,
+      "group": "🎲 보드게임"
     },
     {
-      "name": "그라운드카드",
-      "url": "https://growndcard.com",
-      "emoji": "🃏",
-      "isNew": false,
-      "featured": false
+      "name": "가짜 예술가",
+      "url": "https://m00nssaem12.github.io/fakeartist/",
+      "emoji": "🎭",
+      "isNew": true,
+      "featured": false,
+      "group": "🎲 보드게임"
+    },
+    {
+      "name": "크라켈 오라켈",
+      "url": "https://m00nssaem12.github.io/KrakelOrakel/",
+      "emoji": "🖍️",
+      "isNew": true,
+      "featured": false,
+      "group": "🎲 보드게임"
     },
     {
       "name": "카훗",
       "url": "https://kahoot.it",
       "emoji": "🎯",
       "isNew": false,
-      "featured": false
+      "featured": false,
+      "group": "🧠 퀴즈·복습 게임"
     },
     {
       "name": "블루킷",
       "url": "https://play.blooket.com/play",
       "emoji": "🚀",
       "isNew": false,
-      "featured": false
-    },
-    {
-      "name": "나이스 학부모서비스 학부모용",
-      "url": "https://parents.neis.go.kr",
-      "emoji": "📋",
-      "isNew": false,
-      "featured": false
+      "featured": false,
+      "group": "🧠 퀴즈·복습 게임"
     },
     {
       "name": "방탈출 퀴즈",
       "url": "https://how-to-teach-e92be.web.app/",
       "emoji": "🗝️",
       "isNew": false,
-      "featured": false
+      "featured": false,
+      "group": "🧠 퀴즈·복습 게임"
     },
     {
       "name": "나라 위치 랭킹전",
       "url": "https://icodes.mycafe24.com/kor/findworld/",
       "emoji": "🌍",
       "isNew": false,
-      "featured": false
+      "featured": false,
+      "group": "🧠 퀴즈·복습 게임"
     },
     {
       "name": "2학기 전설의 검",
       "url": "https://legendaryswordbh.pages.dev/",
       "emoji": "⚔️",
       "isNew": false,
-      "featured": false
+      "featured": false,
+      "group": "🧠 퀴즈·복습 게임"
     },
     {
       "name": "복습RPG",
       "url": "https://rewindrpg.web.app/",
       "emoji": "🎮",
       "isNew": false,
-      "featured": false
+      "featured": false,
+      "group": "🧠 퀴즈·복습 게임"
     },
     {
       "name": "엔트리",
       "url": "https://playentry.org/",
       "emoji": "🧩",
       "isNew": false,
-      "featured": false
-    },
-    {
-      "name": "치아오치아오",
-      "url": "https://m00nssaem12.github.io/ciaociao/",
-      "emoji": "👋",
-      "isNew": false,
-      "featured": false
-    },
-    {
-      "name": "HTP 마음검사",
-      "url": "https://htp-web.web.app/",
-      "emoji": "🎨",
-      "isNew": false,
-      "featured": false
+      "featured": false,
+      "group": "💻 학습 도구"
     },
     {
       "name": "인공지능 학습 팅커벨",
       "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/3V8jto8TVr.do?pageSeq=2562066",
       "emoji": "🤖",
       "isNew": false,
-      "featured": false
+      "featured": false,
+      "group": "💻 학습 도구"
+    },
+    {
+      "name": "그라운드카드",
+      "url": "https://growndcard.com",
+      "emoji": "🃏",
+      "isNew": false,
+      "featured": false,
+      "group": "💙 마음·감정"
+    },
+    {
+      "name": "HTP 마음검사",
+      "url": "https://htp-web.web.app/",
+      "emoji": "🎨",
+      "isNew": false,
+      "featured": false,
+      "group": "💙 마음·감정"
+    },
+    {
+      "name": "모두스쿨 (학생사진셀렉)",
+      "url": "https://www.moduschool.co.kr/",
+      "emoji": "📸",
+      "isNew": false,
+      "featured": false,
+      "group": "🏫 학교·안내"
+    },
+    {
+      "name": "나이스 학부모서비스 학부모용",
+      "url": "https://parents.neis.go.kr",
+      "emoji": "📋",
+      "isNew": false,
+      "featured": false,
+      "group": "🏫 학교·안내"
     }
   ]
 }
