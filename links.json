@@ -1,7 +1,17 @@
 {
-  "updated": "2026-09-29",
+  "updated": "2026-10-20",
   "notice": "",
   "links": [
+    {
+      "name": "디드 (디지털 드로잉)",
+      "url": "https://xn--hy1b4d.com/",
+      "emoji": "🖌️",
+      "isNew": true,
+      "featured": true,
+      "label": "🎨 미술 시간",
+      "desc": "디드.com — 미술 시간에 쓰는 디지털 드로잉 사이트예요",
+      "group": "💻 학습 도구"
+    },
     {
       "name": "챠오챠오",
       "url": "https://m00nssaem12.github.io/ciaociao/",
