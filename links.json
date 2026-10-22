@@ -1,16 +1,15 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-22",
   "notice": "",
   "links": [
     {
-      "name": "디드 (디지털 드로잉)",
-      "url": "https://xn--hy1b4d.com/",
-      "emoji": "🖌️",
+      "name": "사회 IB 수업 자료",
+      "url": "https://drive.google.com/file/d/1XD6NYiUAIhFClKmo7pG0YF_iq_ppdfbQ/view",
+      "emoji": "🌏",
       "isNew": true,
       "featured": true,
-      "label": "🎨 미술 시간",
-      "desc": "디드.com — 미술 시간에 쓰는 디지털 드로잉 사이트예요",
-      "group": "💻 학습 도구"
+      "label": "⭐ 중요",
+      "desc": "사회 IB 수업에서 사용하는 자료예요"
     },
     {
       "name": "챠오챠오",
@@ -83,6 +82,14 @@
       "isNew": false,
       "featured": false,
       "group": "🧠 퀴즈·복습 게임"
+    },
+    {
+      "name": "디드 (디지털 드로잉)",
+      "url": "https://xn--hy1b4d.com/",
+      "emoji": "🖌️",
+      "isNew": false,
+      "featured": false,
+      "group": "💻 학습 도구"
     },
     {
       "name": "엔트리",
