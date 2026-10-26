@@ -1,16 +1,7 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-26",
   "notice": "",
   "links": [
-    {
-      "name": "80억분의 1",
-      "url": "https://1in8b.life/ko/?edu=1",
-      "emoji": "🌐",
-      "isNew": true,
-      "featured": true,
-      "label": "⭐ 중요",
-      "desc": "수업 시간에 선생님 안내에 따라 접속하세요"
-    },
     {
       "name": "챠오챠오",
       "url": "https://m00nssaem12.github.io/ciaociao/",
@@ -84,6 +75,14 @@
       "group": "🧠 퀴즈·복습 게임"
     },
     {
+      "name": "에코아일랜드",
+      "url": "https://www.xn--o01bj2qisnovf.com/honeylab/ecoisland/",
+      "emoji": "🏝️",
+      "isNew": true,
+      "featured": false,
+      "group": "🧠 퀴즈·복습 게임"
+    },
+    {
       "name": "디드 (디지털 드로잉)",
       "url": "https://xn--hy1b4d.com/",
       "emoji": "🖌️",
@@ -143,6 +142,14 @@
       "name": "사회 IB 수업 자료",
       "url": "https://drive.google.com/file/d/1XD6NYiUAIhFClKmo7pG0YF_iq_ppdfbQ/view",
       "emoji": "🌏",
+      "isNew": false,
+      "featured": false,
+      "group": "📚 수업 자료"
+    },
+    {
+      "name": "80억분의 1",
+      "url": "https://1in8b.life/ko/?edu=1",
+      "emoji": "🌐",
       "isNew": false,
       "featured": false,
       "group": "📚 수업 자료"
