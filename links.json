@@ -13,6 +13,16 @@
       "group": "🧠 퀴즈·복습 게임"
     },
     {
+      "name": "무요무요",
+      "url": "https://muyomuyo.vercel.app/",
+      "emoji": "🎈",
+      "isNew": true,
+      "featured": true,
+      "label": "⭐ 중요",
+      "desc": "수업 시간에 선생님 안내에 따라 접속하세요",
+      "group": "🧠 퀴즈·복습 게임"
+    },
+    {
       "name": "챠오챠오",
       "url": "https://m00nssaem12.github.io/ciaociao/",
       "emoji": "👋",
