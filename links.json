@@ -79,8 +79,10 @@
       "url": "https://www.xn--o01bj2qisnovf.com/honeylab/ecoisland/",
       "emoji": "🏝️",
       "isNew": true,
-      "featured": false,
-      "group": "🧠 퀴즈·복습 게임"
+      "featured": true,
+      "group": "🧠 퀴즈·복습 게임",
+      "label": "⭐ 중요",
+      "desc": "수업 시간에 선생님 안내에 따라 접속하세요"
     },
     {
       "name": "디드 (디지털 드로잉)",
