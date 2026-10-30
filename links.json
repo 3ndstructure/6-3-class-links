@@ -1,26 +1,15 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-10-30",
   "notice": "",
   "links": [
     {
-      "name": "입체 한 판!",
-      "url": "https://solid-hanpan.kcyboy123.workers.dev",
-      "emoji": "🧊",
+      "name": "학교폭력 실태조사",
+      "url": "https://naver.me/F1aPSW8S",
+      "emoji": "📝",
       "isNew": true,
       "featured": true,
       "label": "⭐ 중요",
-      "desc": "수업 시간에 선생님 안내에 따라 접속하세요",
-      "group": "🧠 퀴즈·복습 게임"
-    },
-    {
-      "name": "무요무요",
-      "url": "https://muyomuyo.vercel.app/",
-      "emoji": "🎈",
-      "isNew": true,
-      "featured": true,
-      "label": "⭐ 중요",
-      "desc": "수업 시간에 선생님 안내에 따라 접속하세요",
-      "group": "🧠 퀴즈·복습 게임"
+      "desc": "학교폭력 실태조사 설문에 참여해 주세요"
     },
     {
       "name": "챠오챠오",
@@ -99,6 +88,22 @@
       "url": "https://www.xn--o01bj2qisnovf.com/honeylab/ecoisland/",
       "emoji": "🏝️",
       "isNew": true,
+      "featured": false,
+      "group": "🧠 퀴즈·복습 게임"
+    },
+    {
+      "name": "입체 한 판!",
+      "url": "https://solid-hanpan.kcyboy123.workers.dev",
+      "emoji": "🧊",
+      "isNew": false,
+      "featured": false,
+      "group": "🧠 퀴즈·복습 게임"
+    },
+    {
+      "name": "무요무요",
+      "url": "https://muyomuyo.vercel.app/",
+      "emoji": "🎈",
+      "isNew": false,
       "featured": false,
       "group": "🧠 퀴즈·복습 게임"
     },
