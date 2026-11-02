@@ -1,15 +1,54 @@
 {
-  "updated": "2026-10-30",
-  "notice": "",
+  "updated": "2026-11-02",
+  "notice": "IB 수업: 아래에서 자기 모둠 보드를 눌러 들어가세요!",
   "links": [
     {
-      "name": "학교폭력 실태조사",
-      "url": "https://naver.me/F1aPSW8S",
-      "emoji": "📝",
-      "isNew": true,
+      "name": "참교육 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/88Y1W1u2qJ.do?pageSeq=2688482",
+      "emoji": "🎓",
+      "isNew": false,
       "featured": true,
-      "label": "⭐ 중요",
-      "desc": "학교폭력 실태조사 설문에 참여해 주세요"
+      "label": "📌 IB 모둠 보드"
+    },
+    {
+      "name": "건강과 웰빙 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/xdHqoTW29J.do?pageSeq=2688421",
+      "emoji": "💪",
+      "isNew": false,
+      "featured": true,
+      "label": "📌 IB 모둠 보드"
+    },
+    {
+      "name": "유우시 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/8O19w97my5.do?pageSeq=2688428",
+      "emoji": "🎤",
+      "isNew": false,
+      "featured": true,
+      "label": "📌 IB 모둠 보드"
+    },
+    {
+      "name": "백지헌 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/9BhaAOGbri.do?pageSeq=2688431",
+      "emoji": "🌟",
+      "isNew": false,
+      "featured": true,
+      "label": "📌 IB 모둠 보드"
+    },
+    {
+      "name": "나이키 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/i2S8jPXj2Q.do?pageSeq=2688435",
+      "emoji": "👟",
+      "isNew": false,
+      "featured": true,
+      "label": "📌 IB 모둠 보드"
+    },
+    {
+      "name": "삼다수 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/E0761WZo58.do?pageSeq=2688445",
+      "emoji": "💧",
+      "isNew": false,
+      "featured": true,
+      "label": "📌 IB 모둠 보드"
     },
     {
       "name": "챠오챠오",
