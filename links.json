@@ -1,7 +1,16 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-04",
   "notice": "IB 수업: 아래에서 자기 모둠 보드를 눌러 들어가세요!",
   "links": [
+    {
+      "name": "학교폭력 실태조사",
+      "url": "https://form.naver.com/response/I15J0BWUOht",
+      "emoji": "📝",
+      "isNew": false,
+      "featured": true,
+      "label": "⭐ 중요",
+      "desc": "학교폭력 실태조사 설문에 참여해 주세요"
+    },
     {
       "name": "참교육 모둠",
       "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/88Y1W1u2qJ.do?pageSeq=2688482",
