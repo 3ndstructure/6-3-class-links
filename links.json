@@ -1,73 +1,7 @@
 {
   "updated": "2026-11-11",
-  "notice": "IB 수업: 아래에서 자기 모둠 보드를 눌러 들어가세요!",
+  "notice": "",
   "links": [
-    {
-      "name": "팅커벨 보드",
-      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/F0K1602810.do?pageSeq=2707199",
-      "emoji": "🧚",
-      "isNew": false,
-      "featured": true,
-      "label": "⭐ 중요",
-      "desc": "수업 시간에 선생님 안내에 따라 접속하세요"
-    },
-    {
-      "name": "학교교육계획 수립 설문지",
-      "url": "https://tasm.co.kr/Research_page_Start.php?research_id=79413449180",
-      "emoji": "📋",
-      "isNew": false,
-      "featured": true,
-      "label": "⭐ 중요",
-      "desc": "학교교육계획 수립 설문에 참여해 주세요"
-    },
-    {
-      "name": "참교육 모둠",
-      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/88Y1W1u2qJ.do?pageSeq=2688482",
-      "emoji": "🎓",
-      "isNew": false,
-      "featured": true,
-      "label": "📌 IB 모둠 보드"
-    },
-    {
-      "name": "건강과 웰빙 모둠",
-      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/xdHqoTW29J.do?pageSeq=2688421",
-      "emoji": "💪",
-      "isNew": false,
-      "featured": true,
-      "label": "📌 IB 모둠 보드"
-    },
-    {
-      "name": "유우시 모둠",
-      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/8O19w97my5.do?pageSeq=2688428",
-      "emoji": "🎤",
-      "isNew": false,
-      "featured": true,
-      "label": "📌 IB 모둠 보드"
-    },
-    {
-      "name": "백지헌 모둠",
-      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/9BhaAOGbri.do?pageSeq=2688431",
-      "emoji": "🌟",
-      "isNew": false,
-      "featured": true,
-      "label": "📌 IB 모둠 보드"
-    },
-    {
-      "name": "나이키 모둠",
-      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/i2S8jPXj2Q.do?pageSeq=2688435",
-      "emoji": "👟",
-      "isNew": false,
-      "featured": true,
-      "label": "📌 IB 모둠 보드"
-    },
-    {
-      "name": "삼다수 모둠",
-      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/E0761WZo58.do?pageSeq=2688445",
-      "emoji": "💧",
-      "isNew": false,
-      "featured": true,
-      "label": "📌 IB 모둠 보드"
-    },
     {
       "name": "챠오챠오",
       "url": "https://m00nssaem12.github.io/ciaociao/",
@@ -221,6 +155,14 @@
       "group": "🏫 학교·안내"
     },
     {
+      "name": "학교교육계획 수립 설문지",
+      "url": "https://tasm.co.kr/Research_page_Start.php?research_id=79413449180",
+      "emoji": "📋",
+      "isNew": false,
+      "featured": false,
+      "group": "🏫 학교·안내"
+    },
+    {
       "name": "사회 IB 수업 자료",
       "url": "https://drive.google.com/file/d/1XD6NYiUAIhFClKmo7pG0YF_iq_ppdfbQ/view",
       "emoji": "🌏",
@@ -232,6 +174,62 @@
       "name": "80억분의 1",
       "url": "https://1in8b.life/ko/?edu=1",
       "emoji": "🌐",
+      "isNew": false,
+      "featured": false,
+      "group": "📚 수업 자료"
+    },
+    {
+      "name": "팅커벨 보드",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/F0K1602810.do?pageSeq=2707199",
+      "emoji": "🧚",
+      "isNew": false,
+      "featured": false,
+      "group": "📚 수업 자료"
+    },
+    {
+      "name": "참교육 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/88Y1W1u2qJ.do?pageSeq=2688482",
+      "emoji": "🎓",
+      "isNew": false,
+      "featured": false,
+      "group": "📚 수업 자료"
+    },
+    {
+      "name": "건강과 웰빙 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/xdHqoTW29J.do?pageSeq=2688421",
+      "emoji": "💪",
+      "isNew": false,
+      "featured": false,
+      "group": "📚 수업 자료"
+    },
+    {
+      "name": "유우시 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/8O19w97my5.do?pageSeq=2688428",
+      "emoji": "🎤",
+      "isNew": false,
+      "featured": false,
+      "group": "📚 수업 자료"
+    },
+    {
+      "name": "백지헌 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/9BhaAOGbri.do?pageSeq=2688431",
+      "emoji": "🌟",
+      "isNew": false,
+      "featured": false,
+      "group": "📚 수업 자료"
+    },
+    {
+      "name": "나이키 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/i2S8jPXj2Q.do?pageSeq=2688435",
+      "emoji": "👟",
+      "isNew": false,
+      "featured": false,
+      "group": "📚 수업 자료"
+    },
+    {
+      "name": "삼다수 모둠",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/E0761WZo58.do?pageSeq=2688445",
+      "emoji": "💧",
       "isNew": false,
       "featured": false,
       "group": "📚 수업 자료"
