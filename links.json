@@ -1,7 +1,16 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-11",
   "notice": "IB 수업: 아래에서 자기 모둠 보드를 눌러 들어가세요!",
   "links": [
+    {
+      "name": "팅커벨 보드",
+      "url": "https://b.tkbell.co.kr/tkboard/woi/1341093/F0K1602810.do?pageSeq=2707199",
+      "emoji": "🧚",
+      "isNew": false,
+      "featured": true,
+      "label": "⭐ 중요",
+      "desc": "수업 시간에 선생님 안내에 따라 접속하세요"
+    },
     {
       "name": "학교교육계획 수립 설문지",
       "url": "https://tasm.co.kr/Research_page_Start.php?research_id=79413449180",
