@@ -1,7 +1,16 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-20",
   "notice": "",
   "links": [
+    {
+      "name": "무무크래프트",
+      "url": "https://mumucraft.schoolkok.com/",
+      "emoji": "⛏️",
+      "isNew": false,
+      "featured": true,
+      "label": "⭐ 중요",
+      "desc": "수업 시간에 선생님 안내에 따라 접속하세요"
+    },
     {
       "name": "AI 활용 실태조사",
       "url": "https://www.surveys.kr/2026/11/P26110301/index.asp?ResType=5FF9875DF4",
@@ -23,7 +32,7 @@
       "name": "가짜 예술가",
       "url": "https://m00nssaem12.github.io/fakeartist/",
       "emoji": "🎭",
-      "isNew": true,
+      "isNew": false,
       "featured": false,
       "group": "🎲 보드게임"
     },
@@ -31,7 +40,7 @@
       "name": "크라켈 오라켈",
       "url": "https://m00nssaem12.github.io/KrakelOrakel/",
       "emoji": "🖍️",
-      "isNew": true,
+      "isNew": false,
       "featured": false,
       "group": "🎲 보드게임"
     },
@@ -87,7 +96,7 @@
       "name": "에코아일랜드",
       "url": "https://www.xn--o01bj2qisnovf.com/honeylab/ecoisland/",
       "emoji": "🏝️",
-      "isNew": true,
+      "isNew": false,
       "featured": false,
       "group": "🧠 퀴즈·복습 게임"
     },
