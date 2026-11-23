@@ -1,24 +1,16 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-23",
   "notice": "",
   "links": [
     {
-      "name": "무무크래프트",
-      "url": "https://mumucraft.schoolkok.com/",
-      "emoji": "⛏️",
+      "name": "바느질 물통 만들기",
+      "url": "https://www.canva.com/design/DAHbsATvW2E/IThkWF2aZeDhLvnlTTXDKA/view?utlId=h9b42502fee#1",
+      "emoji": "🧵",
       "isNew": false,
       "featured": true,
       "label": "⭐ 중요",
-      "desc": "수업 시간에 선생님 안내에 따라 접속하세요"
-    },
-    {
-      "name": "AI 활용 실태조사",
-      "url": "https://www.surveys.kr/2026/11/P26110301/index.asp?ResType=5FF9875DF4",
-      "emoji": "🤖",
-      "isNew": false,
-      "featured": true,
-      "label": "⭐ 중요",
-      "desc": "AI 활용 실태조사 설문에 참여해 주세요"
+      "desc": "수업 시간에 선생님 안내에 따라 접속하세요",
+      "group": "📚 수업 자료"
     },
     {
       "name": "챠오챠오",
@@ -117,6 +109,14 @@
       "group": "🧠 퀴즈·복습 게임"
     },
     {
+      "name": "무무크래프트",
+      "url": "https://mumucraft.schoolkok.com/",
+      "emoji": "⛏️",
+      "isNew": false,
+      "featured": false,
+      "group": "🧠 퀴즈·복습 게임"
+    },
+    {
       "name": "디드 (디지털 드로잉)",
       "url": "https://xn--hy1b4d.com/",
       "emoji": "🖌️",
@@ -168,6 +168,14 @@
       "name": "나이스 학부모서비스 학부모용",
       "url": "https://parents.neis.go.kr",
       "emoji": "📋",
+      "isNew": false,
+      "featured": false,
+      "group": "🏫 학교·안내"
+    },
+    {
+      "name": "AI 활용 실태조사",
+      "url": "https://www.surveys.kr/2026/11/P26110301/index.asp?ResType=5FF9875DF4",
+      "emoji": "🤖",
       "isNew": false,
       "featured": false,
       "group": "🏫 학교·안내"
